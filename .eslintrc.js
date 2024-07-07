@@ -11,6 +11,7 @@ module.exports = {
     'comma-dangle': 'off',
     'object-curly-newline': 'off',
     'linebreak-style': 'off',
+    'class-methods-use-this': 'off',
 
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': [
