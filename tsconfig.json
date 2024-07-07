@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
-	"target": "ESNext",
-	"module": "CommonJS",
-	"moduleResolution": "Node",
-	"esModuleInterop": true,
-	"forceConsistentCasingInFileNames": true,
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
 	"strict": true,
-	"skipLibCheck": true,
+	"strictNullChecks": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
 	"resolveJsonModule": true,
-	"lib": ["ESNext"],
-	"isolatedModules": true
+	"isolatedModules": true,
+	"outDir": "./dist",
+    "skipLibCheck": true,
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
