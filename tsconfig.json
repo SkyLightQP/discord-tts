@@ -3,14 +3,18 @@
     "target": "ESNext",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-	"strict": true,
-	"strictNullChecks": true,
+    "strict": true,
+    "strictNullChecks": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-	"resolveJsonModule": true,
-	"isolatedModules": true,
-	"outDir": "./dist",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "outDir": "./dist",
     "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
