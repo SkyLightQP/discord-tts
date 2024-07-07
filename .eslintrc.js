@@ -17,6 +17,8 @@ module.exports = {
       'error',
       { devDependencies: true }
     ],
+    'import/extensions': 'off',
+    'import/no-unresolved': 'off',
 
     'prettier/prettier': ['error', { endOfLine: 'auto' }]
   }
