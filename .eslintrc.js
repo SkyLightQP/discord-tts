@@ -14,6 +14,8 @@ module.exports = {
     'object-curly-newline': 'off',
     'linebreak-style': 'off',
 
+    'import/prefer-default-export': 'off',
+
     'prettier/prettier': ['error', { endOfLine: 'auto' }]
   }
 };
