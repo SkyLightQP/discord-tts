@@ -1,4 +1,4 @@
-# 떠들석떠들썩
+# 🤭 떠들석떠들썩
 
 <p align="center">
 <img src="./docs/logo.png" alt="discord-tts logo" />
