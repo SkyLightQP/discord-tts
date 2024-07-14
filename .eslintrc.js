@@ -12,6 +12,7 @@ module.exports = {
     'object-curly-newline': 'off',
     'linebreak-style': 'off',
     'class-methods-use-this': 'off',
+    'prefer-destructuring': 'off',
 
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': [
