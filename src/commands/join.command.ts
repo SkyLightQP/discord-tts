@@ -5,6 +5,7 @@ import {
 } from 'discord.js';
 import { joinVoiceChannel } from '@discordjs/voice';
 import { Command } from '@/commands/command';
+import { config } from '@/config';
 
 export default class JoinCommand implements Command {
   readonly data = new SlashCommandBuilder()
@@ -18,6 +19,14 @@ export default class JoinCommand implements Command {
       await interaction.reply(
         '명령어를 실행할 수 없습니다. 잠시후 다시 시도해주세요.'
       );
+      return;
+    }
+
+    if (
+      interaction.channelId === null ||
+      interaction.channelId !== config.ALLOW_COMMAND_CHANNEL
+    ) {
+      await interaction.reply('명령어를 실행할 수 없는 채널입니다.');
       return;
     }
 
