@@ -25,7 +25,7 @@ const commandCollection = new Collection<string, Command>();
 async function registerCommands() {
   const commands = await Promise.all(
     readdirSync(join(__dirname, 'commands'))
-      .filter((file) => file.endsWith('.ts'))
+      .filter((file) => file.endsWith('.command.ts'))
       .filter((file) => file !== 'command.ts')
       .map((file) => import(`@/commands/${file}`))
   );
@@ -46,7 +46,7 @@ async function registerCommands() {
 async function registerEvents() {
   const listeners = await Promise.all(
     readdirSync(join(__dirname, 'listeners'))
-      .filter((file) => file.endsWith('.ts'))
+      .filter((file) => file.endsWith('.listener.ts'))
       .filter((file) => file !== 'listener.ts')
       .map((file) => import(`@/listeners/${file}`))
   );
