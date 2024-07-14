@@ -5,6 +5,7 @@ FROM base AS builder
 COPY / /workspace
 WORKDIR /workspace
 
+RUN apt-get update && apt-get install -y ffmpeg
 RUN yarn install
 
 FROM base AS runner
