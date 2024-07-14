@@ -5,6 +5,7 @@ FROM base AS builder
 COPY / /workspace
 WORKDIR /workspace
 
+RUN yum install FFmpeg
 RUN yarn install
 
 FROM base AS runner
