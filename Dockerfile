@@ -2,11 +2,8 @@ FROM node:20-alpine AS base
 
 FROM base AS builder
 
+COPY / /workspace
 WORKDIR /workspace
-
-COPY package.json ./
-COPY yarn.lock ./
-COPY ./src/ ./
 
 RUN yarn install
 
@@ -23,4 +20,4 @@ ENV NODE_ENV=production
 
 VOLUME ["./logs"]
 
-CMD yarn start
+CMD ["yarn", "start"]
