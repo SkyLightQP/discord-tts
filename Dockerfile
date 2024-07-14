@@ -1,4 +1,4 @@
-FROM node:20-alpine as base
+FROM node:20-alpine AS base
 
 FROM base AS builder
 
@@ -6,6 +6,7 @@ WORKDIR /workspace
 
 COPY package.json ./
 COPY yarn.lock ./
+COPY ./src/ ./
 
 RUN yarn install
 
