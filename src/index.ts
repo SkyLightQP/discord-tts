@@ -7,6 +7,7 @@ import {
 } from 'discord.js';
 import { readdirSync } from 'fs';
 import { join } from 'path';
+import { generateDependencyReport } from '@discordjs/voice';
 import { logger } from '@/logger';
 import { config } from '@/config';
 import { Command } from '@/commands/command';
@@ -93,6 +94,8 @@ async function main() {
 
   await registerEvents();
   logger.info('이벤트 등록을 성공적으로 완료했습니다.');
+
+  logger.info(`\n${generateDependencyReport()}`);
 }
 
 main();
