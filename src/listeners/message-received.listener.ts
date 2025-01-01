@@ -7,6 +7,7 @@ import {
 } from '@discordjs/voice';
 import { Listener } from '@/listeners/listener';
 import { config } from '@/config';
+import { logger } from '@/logger';
 
 export default class MessageReceivedListener
   implements Listener<'messageCreate'>
@@ -31,5 +32,7 @@ export default class MessageReceivedListener
 
     voiceConnection.subscribe(audioPlayer);
     audioPlayer.play(audioResource);
+
+    logger.info(`[CHAT] #${msg.author.tag}: ${msg.content}`);
   }
 }
