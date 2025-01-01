@@ -25,7 +25,9 @@ export default class MessageReceivedListener
       lang: 'ko',
       slow: false
     });
+
     const audioResource = createAudioResource(ttsUrl);
+    audioResource.volume?.setVolume(0.7);
 
     voiceConnection.subscribe(audioPlayer);
     audioPlayer.play(audioResource);
